@@ -1,12 +1,15 @@
-// import Signup from './Component/Signup';
-// import AuthProvider from './Context/AuthProvider';
-import Main from './Material_UI/Main';
+import Signup from './Component/Signup';
+import AuthProvider from './Context/AuthProvider';
+import Navbar from './Component/NavBar';
+
 function App() {
   return (
-    // <AuthProvider>
-    // <Signup/>
-    // </AuthProvider>
-    <Main/>
+    <AuthProvider>
+      {/* <Navbar/> */}
+    <Signup/>
+  
+    </AuthProvider>
+    
   );
 }
 

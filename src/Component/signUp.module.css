@@ -1,0 +1,45 @@
+.signup_container
+{
+    margin-top: 13vh;
+    margin-left: 3rem;
+    border: 1px solid silver;
+    width:25vw;
+}
+.heading{
+    align-items: center;
+    margin-left: 4rem;
+    font-size: 3rem;
+}
+.form_container{
+    margin-left: 2rem;
+}
+.input_container{
+    margin-left: 1.5rem;
+    height: 1.5rem;
+    width:17vw;
+    margin-bottom: 1rem;
+    padding: 0.3rem;
+}
+.div_space{
+    margin-left: 1.5rem;
+}
+.main_container{
+    display: flex;
+    position: absolute;
+
+}
+.img_container{
+    margin-top: 10vh;
+    width: 25rem;
+    height: 30rem;
+    margin-left: 18rem;
+
+}
+.p1_img{
+    position: absolute;
+    top: 8.7rem;
+    left: 26rem;
+    width: 14rem;
+    height: 21rem;
+}
+
