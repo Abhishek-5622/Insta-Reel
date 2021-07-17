@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import image from "./phone.png";
 import p1 from "./p1.jpg";
+import { useHistory } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
     signup_btn: {
         marginLeft: 100,
@@ -28,11 +29,13 @@ function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
+    const history = useHistory();
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     const [file, setFile] = useState(null)
+    
     // consume context
-    const { signup } = useContext(AuthContext);
+    const {signup,currentUser} =useContext(AuthContext);
     
     // handle signup
     const handleSignup = async (e) => {
@@ -84,9 +87,9 @@ function Signup() {
                 setLoading(false);
                 console.log('User has Signed up');
 
-                setName("");
-                setEmail("");
-                setPassword("");
+                // setName("");
+                // setEmail("");
+                // setPassword("");
             }
 
 
@@ -108,7 +111,12 @@ function Signup() {
             setFile(file)
         }
     }
-
+    useEffect(()=>{
+        if(currentUser)
+        {
+          history.push('/')
+        }
+      },[])
     return (
         
             
